@@ -1,6 +1,7 @@
 classification-of-handwritten-numerals
 ======================================
 Overview
+
 This project is to implement and evaluate classification algorithms. You will implement two
 different methods of classification and compare their performance with a publicly available
 package.
