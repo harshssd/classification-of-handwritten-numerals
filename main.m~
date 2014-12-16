@@ -68,27 +68,12 @@ clear ; close all; clc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%% Logistic Regression %%%%%%%%%%%%%%%%%%%%
 
-% %%%%%%% Train
-% load training_data.mat;
-% load training_label.mat;
-% [weight] = train_lr(training_data, training_label);
-%     
-% %%%%%%% Test
-% load test_data.mat;
-% load test_label.mat;
-% [accuracy, y] = test_lr(test_data, test_label, weight);
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%% Neural Networks %%%%%%%%%%%%%%%%%%%%
-
 %%%%%%% Train
 load training_data.mat;
 load training_label.mat;
-[weight1, weight2] = train_nn(training_data, training_label);
+[weight] = train_lr(training_data, training_label);
     
 %%%%%%% Test
 load test_data.mat;
 load test_label.mat;
-[accuracy_nn, y_nn] = test_nn(test_data, test_label, weight1, weight2);
+test_lr(test_data, test_label, weight)
