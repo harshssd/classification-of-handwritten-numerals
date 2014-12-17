@@ -3,7 +3,7 @@ function [Weight1, Weight2] = train_nn(data, label)
 [num_inputs, num_features]= size(data);
 num_hidden = 70;
 num_classes = 10;
-learning_rate = 0.000001;
+learning_rate = 0.00002;
 num_iterations = 700;
 
 %%%% generating 10 different classes of binary outputs

@@ -4,6 +4,7 @@ num_classes = 10;
 num_features = size(data, 2);
 num_inputs = size(label, 1);
 learning_rate = 0.00003;
+num_iterations = 5000;
 
 %%%% generating 10 different classes of binary outputs
 T = zeros(num_inputs, num_classes);
@@ -14,7 +15,6 @@ end
 
 X = [ones(num_inputs, 1) data];
 W = zeros(num_features+1, num_classes);
-num_iterations = 5000;
 
 y = calc_y_lr(X, W, num_classes);
 min_error = 10^4;
